@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  app:
+    build: 
+      context: .
+      dockerfile: ./docker_files/dev.Dockerfile
+      target: dev
+    image: mern_app_dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./app:/usr/src/app
+      # - /usr/src/app/node_modules
+    container_name: mern_app_dev
+    command: npm start

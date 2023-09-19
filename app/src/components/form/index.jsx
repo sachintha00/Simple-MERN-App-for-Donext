@@ -20,6 +20,7 @@ const dropdownOptions = [
 
 
 function App() {
+    const version = process.env.REACT_APP_VERSION || 'v0.0.0';
     return (
         <Container maxWidth="sm">
             <Formik
@@ -122,6 +123,7 @@ function App() {
                     </Box>
                 </Form>
             </Formik>
+            {version}
         </Container>
     );
 }
