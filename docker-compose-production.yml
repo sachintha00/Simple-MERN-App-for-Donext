@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  app:
+    image: ghcr.io/sachintha00/mern_app_prodn:latest
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    container_name: mern_app_prod
